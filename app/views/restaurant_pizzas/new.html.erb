@@ -1,0 +1,6 @@
+<%= form_for @restaurant_pizzas do |f| %>
+    Pizza: <%= f.collection_select :pizza_ids, Pizza.all, :id, :name %>
+    Restaurant: <%= f.collection_select :restaurant_ids, Restaurant.all, :id, :name %>
+    Price: <%= f.number_field :amount, value: number_to_currency(f.price.amount.to_f, delimiter: '', unit: '$'), step: :any %>
+    <%= f.submit %>
+<% end %>
