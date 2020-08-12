@@ -1,0 +1,7 @@
+<h1 style='font-size:1.5rem;margin-top:50px'>Pizza Name:
+    <%= link_to pizza.name, pizza %>
+</h1>
+
+<p>Sold at <%= pizza.restaurants.count %> restaurants</p>
+<p>Average Price: <%= number_with_precision(pizza.average_price, precision: 2) %></p>
+<p>Ingredients: <%= pizza.ingredients %></p>

@@ -1,0 +1,14 @@
+<header>
+  <h1><%= @restaurant.name %></h1>
+  <h2><%= link_to @restaurant.address, @restaurant.address_gmap_link %></h2>
+</header>
+
+<main>
+  <br>
+  <p>Average Price of all Pizzas: <%= number_with_precision(@restaurant.average_pizza_price, precision: 2) %></p>
+  <ul>
+    <% @restaurant.pizzas.each do |pizza| %>
+      <li><%= render partial: 'pizzas/pizza', locals: { pizza: pizza } %></li>
+    <% end %>
+  </ul>
+</main>

@@ -1,0 +1,8 @@
+<header>
+  <h2>Add a Pizza</h2>
+  <p>Complete the form below to add a pizza to a restaurant's menu.</p>
+</header>
+
+<main>
+  <%= render partial: 'form', locals: { restaurant_pizza: RestaurantPizza.new, submit_text: 'Ready!' } %>
+</main>
